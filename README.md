@@ -1,4 +1,8 @@
-# Common Indian Backyard Bird Classifier
+# Common Indian Backyard Birds Classifier
+The fundamental problem we will learn to solve in this project is that of image classification. Given an image, the goal is to identify the category it belongs to. Hence, in this we are project not building a bird classifier- we are building a general image classification system, and birds are simply our data set. Because using "fast.ai" or "classify birds" are just implementation details, this project will deal it as a broader problem- so that later we can replace birds with other objects.
+
+## A brief overview:
+
 In this project we'll train a model to tell apart 5 common Indian birds:
 - Red-wattled Lapwing
 - Red-vented Bulbul
@@ -7,13 +11,10 @@ In this project we'll train a model to tell apart 5 common Indian birds:
 - Indian Grey Hornbill
 
 Same approach as the fast.ai `is-it-a-bird` notebook — search images → clean → train → predict.
-<br>
-
-In this we are project not building a bird classifier- we are building a general image classification system, and birds are simply our data set.
 
 ### Where does the neural network learn from?
 - the neural network learns from looking at many examples
-- hence out dataset contains lots and lots of images
+- hence our dataset contains lots and lots of images
 - the folder name would act as the label and not the image name
 
 ### Where do these images come from?
@@ -25,7 +26,7 @@ In this we are project not building a bird classifier- we are building a general
 ### Why do we need multiple images?
 - suppose we train only on one image: red-wattled lapwing standing on grass in the morning
 - then the model would not be able to identify a lapwing flying or any other such case, because it never learnt about it
-- hence we want variation in our images- this would lead the network to discover what is in common and hence it will be able to identify
+- hence we want variation in our images- this would lead the network to discover what is in common and hence it will be able to identify the bird in various settings
 
 ### Why do we need to clean the data set?
 - search engine makes mistakes
@@ -73,3 +74,4 @@ Hornbill    -0.8
 ```
 
 The largest score wins. Hence the prediction for this example would be bulbul.
+
